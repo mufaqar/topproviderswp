@@ -15,7 +15,7 @@
     </figure>  
     <div>
       <h2 class="sm:text-2xl text-left font-black"><?php the_title() ?></h2>
-      <p class="font-medium text-[#6A6A93] text-xs sm:text-base mt-[2px] text-left">Reviews 7,796  •  Great</p>
+      <p class="font-medium text-[#6A6A93] text-xs sm:text-base mt-[2px] text-left">Reviews <?php echo get_post_meta( get_the_ID(), 'reviews', true ); ?>  •  <?php echo get_post_meta( get_the_ID(), 'rating', true ); ?></p>
       <div class="flex gap-1 items-center mt-1">
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
