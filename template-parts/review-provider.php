@@ -15,14 +15,14 @@
     </figure>  
     <div>
       <h2 class="sm:text-2xl text-left font-black"><?php the_title() ?></h2>
-      <p class="font-medium text-[#6A6A93] text-xs sm:text-base mt-[2px] text-left">Reviews <?php echo get_post_meta( get_the_ID(), 'reviews', true ); ?>  •  <?php echo get_post_meta( get_the_ID(), 'rating', true ); ?></p>
+      <p class="font-medium text-[#6A6A93] text-xs sm:text-base mt-[2px] text-left">Reviews <?php echo get_post_meta( get_the_ID(), 'provider_reviews_reviews', true ); ?>  •  <?php echo get_post_meta( get_the_ID(), 'provider_reviews_comment', true ); ?></p>
       <div class="flex gap-1 items-center mt-1">
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5"/>
         <img src="<?php bloginfo('template_directory'); ?>/images/trustpilot-star.png" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5 grayscale opacity-50"/>
-        <p class="font-semibold text-[#6A6A93] ml-1">4.0</p>
+        <p class="font-semibold text-[#6A6A93] ml-1"><?php echo get_post_meta( get_the_ID(), 'provider_reviews_rating', true ); ?></p>
       </div>
       <div class="text-[10px] hidden sm:flex font-black w-fit mt-2 bg-[#B1F2D0] items-center gap-[2px] rounded-[3px] py-1 px-[6px]">
         <svg fill="#0E7946" width="12px" height="12px" viewBox="0 0 512 512" id="_x30_1" version="1.1" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink">
