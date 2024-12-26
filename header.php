@@ -14,8 +14,7 @@ function get_full_url() {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="canonical" href="<?php echo get_full_url(); ?>">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6552892445438334"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6552892445438334"  crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
