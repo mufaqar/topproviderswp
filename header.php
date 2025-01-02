@@ -13,6 +13,8 @@ function get_full_url() {
   	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images//favicon.ico" type="image/x-icon">
     <link rel="canonical" href="<?php echo get_full_url(); ?>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6552892445438334"  crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
