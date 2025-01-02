@@ -83,9 +83,9 @@
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
-                <?php echo $type ?> Providers in <?php echo $state ?> <span class="text-[#96B93A]"><?php echo $city ?></span>
+                <?php echo FormatData($type) ?> Providers in <?php echo FormatData($state) ?> <span class="text-[#96B93A]"><?php echo FormatData($city) ?></span>
             </h1>
-            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best <?php echo $type ?>
+            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best <?php echo FormatData($type) ?>
                 Providers in your area:</p>
             <div class="!max-w-[712px] w-full bg-white z-30 rounded-2xl mx-auto">
                 <?php get_template_part('template-parts/search', 'form'); ?>
@@ -101,8 +101,8 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo $state?>
-                <span class="text-[#96B93A]"><?php echo $city?> </span>
+            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo FormatData($state);?>
+                <span class="text-[#96B93A]"><?php echo FormatData($city)?> </span>
             </h2>
         </div>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

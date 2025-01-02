@@ -544,6 +544,9 @@ function Cheap_provider_details($provider_ids) {
 
 
 function FormatData($string) {
+    if (strtolower($string) === 'tv') {
+        return 'TV';
+    }
     $string = str_replace('-', ' ', $string);
     $formatted_string = ucwords($string);
     return $formatted_string;
@@ -626,4 +629,6 @@ function current_month_year_shortcode() {
     return date('F Y'); 
 }
 add_shortcode('date_month', 'current_month_year_shortcode');
+
+
 

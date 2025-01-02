@@ -607,7 +607,7 @@ $query_fast = new WP_Query($query_args_fast);
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold">Summary of <?php echo str_replace(['-'], ' ', $type); ?> Providers in 
+            <h2 class="text-2xl font-bold">Summary of <?php echo FormatData($type); ?> Providers in 
                 <span class="text-[#96B93A]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
