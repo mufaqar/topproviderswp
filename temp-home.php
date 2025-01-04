@@ -107,7 +107,7 @@ $providers_query = new WP_Query($argsForProvider);
                             ></path>
                         </svg>
                     </span>
-                    <h2 class="mt-5 text-center text-base font-bold text-[#071F37]">Compare Top Providers</h2>
+                    <h2 class="mt-5 text-center text-base font-bold text-[#071F37]"><a href="<?php echo home_url('comparison'); ?>">Compare Top Providers</a></h2>
                     <div><p class="px-5 mt-5 text-base text-center text-[#464646]">Easily compare dozens of top TV and internet providers, like AT&amp;T and Xfinity, to find the best high-speed options in minutes.</p></div>
                 </div>
             </div>
