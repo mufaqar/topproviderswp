@@ -207,6 +207,7 @@
 <?php endif; ?>
 
 
+
 <?php if( have_rows('internet_and_phone_bundles') ): ?>
 <!-- Internet and Phone Bundles -->
 <section class="my-16">
@@ -455,7 +456,7 @@
 
 <?php if( have_rows('internet_tv_phone_bundles') ): ?>
 
-<!-- Internet, TV &amp; Phone Bundles -->
+<!-- Internet, TV & Phone Bundles -->
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
