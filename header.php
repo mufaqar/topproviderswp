@@ -19,11 +19,8 @@ function get_full_url() {
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6552892445438334"  crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
-
 <?php wp_body_open(); ?>
 <?php check_header();?>
-
-
 <header class="bg-gray-950">
     <div class="flex justify-end items-center py-2 px-4 lg:px-6 lg:hidden">
         <a href="#" class="mr-2 text-sm font-medium text-gray-500 hover:underline">Talk to
