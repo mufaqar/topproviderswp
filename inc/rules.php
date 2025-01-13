@@ -234,7 +234,7 @@ function Generate_Description_For_Zipcode() {
 function Generate_Title_For_City() {
     global $wp_query;
     $state = $wp_query->query_vars['zone_state'];
-    $city = Format($wp_query->query_vars['zone_city']);
+    $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
 
