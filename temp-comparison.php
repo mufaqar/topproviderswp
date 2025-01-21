@@ -14,10 +14,9 @@ get_header();
     </div>
 </section>
 
-<div class="!overflow-x-auto scroll-bar my-20">
-    <section class="mt-14 container mx-auto grid grid-cols-3 px-2 md:px-0 min-w-[540px]">
-
-        <?php
+<section class="py-24">
+    <div class="container mx-auto px-4">
+    <?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -25,8 +24,10 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-       
-    </section>
+    </div>
+</section>
+
+<div class="!overflow-x-auto scroll-bar my-20">  
     <section class="mb-2 container mx-auto grid grid-cols-3 px-2 md:px-0 min-w-[540px]">
         <div class="border font-semibold md:text-xl flex items-center">
             <p class="p-3 px-4 flex items-center">Select Providers</p>
