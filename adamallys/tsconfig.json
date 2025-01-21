@@ -1,0 +1,46 @@
+{
+  "rules": {
+    "react/no-unescaped-entities": 0,
+    "@typescript-eslint/no-explicit-any": "warn"
+},
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts", 
+    "src/components/our-brands/our-brands.jsx", "src/components/hero/main.jsx", "src/components/certifications-and-memberships/CertificationsAndMemberships.jsx", "src/components/certification/Title.jsx", "src/components/Cards/Cards.jsx", "src/app/page.jsx", "src/components/footer/footer.jsx", "src/templates/dry-docking-service/index.jsx", "src/templates/marine-ropes-&-mooring-ropes/index.jsx", "src/templates/TechnicalMarineStores/index.jsx", "src/templates/ShipSpareParts/index.jsx", "src/templates/ProvisionsAndBondedStores/index.jsx", "src/components/digitalization/Leadingpage.jsx"  
+, "src/templates/contact/index.jsx", "src/templates/distributors-&-stockists/index.jsx", "src/templates/sustainability/index.jsx", "src/components/Services/Services.jsx", "src/app/contact/page.jsx", "src/components/news-events/main.jsx", "src/components/news-events/card.jsx", "src/app/sustainability/page.jsx", "src/app/request-a-quote/page.jsx", "src/components/certification/logocard2.jsx", "src/components/certification/Logocard.jsx", "src/components/certification/Title2.jsx", "src/app/(products-&-services)/industrial-&-energy-sector-supplies/page.jsx", "src/app/(products-&-services)/marine-logistics-&-warehousing/page.jsx", "src/app/(products-&-services)/products-&-services/page.jsx", "src/app/(ship-supply)/dry-docking-service/page.jsx", "src/app/(ship-supply)/marine-ropes-&-mooring-ropes/page.jsx", "src/app/(ship-supply)/provisions-&-bonded-stores/page.jsx", "src/app/(ship-supply)/ship-spare-parts/page.jsx", "src/app/distributors-&-stockists/page.jsx", "src/components/digitalization/Card2.jsx", "src/components/digitalization/Card3.jsx", "src/components/digitalization/Digital.jsx", "src/components/header/header-one.jsx", "src/components/header/logo.jsx", "src/components/header/mobile-header.jsx", "src/components/MapComponent/index.jsx", "src/app/test/page.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
