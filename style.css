@@ -403,12 +403,9 @@ footer {
 .the_content img{
   width: 100% !important;
 }
-
-
 .rsm-geography {
   transition: fill 0.2s ease; /* Smooth transition */
 }
-
 .rsm-geography:hover {
   fill: #96B93A !important; /* New fill color on hover */
   fill-opacity: 1 !important;
