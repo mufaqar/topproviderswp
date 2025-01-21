@@ -31,7 +31,7 @@
                             } elseif ($rating < 3.5) {
                                 $starSrc = $i <= 3 ? get_bloginfo('template_directory') . '/images/yellow-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
                                 $starClass = $i <= 3 ? '' : 'grayscale opacity-50';
-                            } elseif ($rating < 4) {
+                            } elseif ($rating < 4.4) {
                                 $starSrc = $i <= 4 ? get_bloginfo('template_directory') . '/images/trustpilot-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
                                 $starClass = $i <= 4 ? '' : 'grayscale opacity-50';
                             } else {
