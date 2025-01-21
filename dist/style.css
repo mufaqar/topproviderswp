@@ -4,7 +4,7 @@ Theme URI: https://topproviders.net
 Author: Mufaqar
 Author URI: https://mufaqar.com
 Description: Top Providers cusom theme for Top Providers
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License 
 Text Domain: tp_theme
 Tags: custom theme development
@@ -892,10 +892,6 @@ video {
   margin-top: 3rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -1019,10 +1015,6 @@ video {
   height: 1rem;
 }
 
-.h-\[calc\(100vh-330px\)\] {
-  height: calc(100vh - 330px);
-}
-
 .h-auto {
   height: auto;
 }
@@ -1054,10 +1046,6 @@ video {
 
 .min-h-\[64\.8px\] {
   min-height: 64.8px;
-}
-
-.min-h-\[calc\(100vh-330px\)\] {
-  min-height: calc(100vh - 330px);
 }
 
 .w-10 {
@@ -2704,6 +2692,18 @@ footer {
   fill-opacity: 1 !important;
 }
 
+.submenu {
+  margin-left: 0 !important;
+}
+
+.submenu .label{
+  grid-column: span 3 / span 3;
+  font-weight: 700 !important;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 10px;
+  padding-bottom: 10px !important;
+}
+
 .hover\:-translate-y-3:hover {
   --tw-translate-y: -0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3499,6 +3499,16 @@ footer {
 
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:h-\[calc\(100vh-330px\)\] {
+    height: calc(100vh - 330px);
+  }
+
+  .xl\:min-h-\[calc\(100vh-330px\)\] {
+    min-height: calc(100vh - 330px);
   }
 }
 
