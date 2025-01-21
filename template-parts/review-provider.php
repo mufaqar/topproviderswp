@@ -43,8 +43,6 @@
                     ?>
                     <p class="font-semibold text-[#6A6A93] ml-1"><?php echo $rating; ?></p>
                 </div>
-
-
                     <div
                         class="text-[10px] hidden sm:flex font-black w-fit mt-2 bg-[#B1F2D0] items-center gap-[2px] rounded-[3px] py-1 px-[6px]">
                         <svg fill="#0E7946" width="12px" height="12px" viewBox="0 0 512 512" id="_x30_1" version="1.1"
@@ -65,8 +63,6 @@
         </svg>
         VERIFIED COMPANY
     </div>
-
-
 
 
     <a href="<?php the_permalink() ?>"
