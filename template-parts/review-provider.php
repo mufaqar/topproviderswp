@@ -22,27 +22,25 @@
                 <?php echo get_post_meta( get_the_ID(), 'provider_reviews_reviews', true ); ?> •
                 <?php echo get_post_meta( get_the_ID(), 'provider_reviews_comment', true ); ?></p>
                 <div class="flex gap-1 items-center mt-1">
-                <?php
-                    $rating = get_post_meta(get_the_ID(), 'provider_reviews_rating', true);
-                    $fullStarClass = 'lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5';
-                    $dimmedStarClass = 'lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5 grayscale opacity-50';
-
-                    for ($i = 1; $i <= 5; $i++) {
-                        if ($rating < 2.5) {
-                            $starClass = $i <= 2 ? 'text-red-500 ' . $fullStarClass : $dimmedStarClass;
-                        } elseif ($rating < 3.5) {
-                            $starClass = $i <= 3 ? 'text-yellow-500 ' . $fullStarClass : $dimmedStarClass;
-                        } elseif ($rating < 4.5) {
-                            $starClass = $i <= 4 ? 'text-green-500 ' . $fullStarClass : $dimmedStarClass;
-                        } else {
-                            $starClass = 'text-green-500 ' . $fullStarClass;
+                    <?php
+                        $rating = get_post_meta(get_the_ID(), 'provider_reviews_rating', true);
+                        for ($i = 1; $i <= 5; $i++) {
+                            if ($rating < 2.5) {
+                                $starSrc = $i <= 2 ? get_bloginfo('template_directory') . '/images/red-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
+                            } elseif ($rating < 3.5) {
+                                $starSrc = $i <= 3 ? get_bloginfo('template_directory') . '/images/yellow-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
+                            } elseif ($rating < 4.5) {
+                                $starSrc = $i <= 4 ? get_bloginfo('template_directory') . '/images/green-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
+                            } else {
+                                $starSrc = get_bloginfo('template_directory') . '/images/green-star.png';
+                            }
+                            
+                            echo '<img src="' . $starSrc . '" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5" />';
                         }
-                        
-                        echo '<img src="' . get_bloginfo('template_directory') . '/images/trustpilot-star.png" class="' . $starClass . '" />';
-                    }
                     ?>
                     <p class="font-semibold text-[#6A6A93] ml-1"><?php echo $rating; ?></p>
                 </div>
+
             <div
                 class="text-[10px] hidden sm:flex font-black w-fit mt-2 bg-[#B1F2D0] items-center gap-[2px] rounded-[3px] py-1 px-[6px]">
                 <svg fill="#0E7946" width="12px" height="12px" viewBox="0 0 512 512" id="_x30_1" version="1.1"
