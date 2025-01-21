@@ -412,9 +412,13 @@ footer {
   fill: #96B93A !important; /* New fill color on hover */
   fill-opacity: 1 !important;
 }
-
+.submenu {
+  margin-left: 0 !important;
+}
 .submenu .label{
   grid-column: span 3 / span 3;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border-bottom: 1px solid #dedede;
+  margin-bottom: 10px;
+  padding-bottom: 10px !important;
 }
