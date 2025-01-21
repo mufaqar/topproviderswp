@@ -24,7 +24,6 @@
                 <div class="flex gap-1 items-center mt-1">
                     <?php
                         $rating = get_post_meta(get_the_ID(), 'provider_reviews_rating', true);
-
                         for ($i = 1; $i <= 5; $i++) {
                             if ($rating < 2.5) {
                                 $starSrc = $i <= 2 ? get_bloginfo('template_directory') . '/images/red-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
@@ -32,14 +31,13 @@
                             } elseif ($rating < 3.5) {
                                 $starSrc = $i <= 3 ? get_bloginfo('template_directory') . '/images/yellow-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
                                 $starClass = $i <= 3 ? '' : 'grayscale opacity-50';
-                            } elseif ($rating < 4.5) {
+                            } elseif ($rating < 4) {
                                 $starSrc = $i <= 4 ? get_bloginfo('template_directory') . '/images/trustpilot-star.png' : get_bloginfo('template_directory') . '/images/trustpilot-star.png';
                                 $starClass = $i <= 4 ? '' : 'grayscale opacity-50';
                             } else {
                                 $starSrc = get_bloginfo('template_directory') . '/images/trustpilot-star.png';
                                 $starClass = '';
                             }
-
                             echo '<img src="' . $starSrc . '" class="lg:!w-10 lg:!h-10 md:!h-8 md:!w-8 h-5 w-5 ' . $starClass . '" />';
                         }
                     ?>
