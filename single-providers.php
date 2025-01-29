@@ -22,40 +22,26 @@
 ?>
 
 
-<section class="relative pbanner" style="background-image: url('<?php echo $features_banner ?>')">
-    <div class="overlay_wrapper">
-        <div class="container mx-auto px-4 flex md:flex-row flex-col gap-7 items-center">
-            <div class="md:w-1/2 w-full py-10 text-white">
-                <a href="/providers/att">
-                    <img
-                        alt="Feature Image"
-                        loading="lazy"
-                        width="140"
-                        height="50"
-                        class="plogo"
-                        decoding="async"
-                        data-nimg="1"
-                        src="<?php echo $logoUrl ?>"
-                        style="color: transparent; filter: invert(1); mix-blend-mode: exclusion;"
-                    />
-                </a>
-                <h1 class="text-3xl md:text-5xl md:leading-tight font-bold text-white"><span class="text-[#96B93A]"><?php echo the_title(); ?> </span>Plans and Pricing for <?php echo $currentMonth ?>, <?php echo $currentYear ?></h1>
-                <div class="features text-white mb-5 single_content">
-                    <?php echo $features ?>
-                </div>
-                <h5 class="text-xl font-bold text-white">Price Starting At</h5>
-                <h2 class="md:text-4xl text-3xl font-extrabold text-white my-4 flex items-start">
+
+<section class="py-14 flex items-center bg-gray-50 relative">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center flex-col items-center">
+            <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
+            <span class="text-[#96B93A]"><?php echo the_title(); ?> </span>Plans and Pricing for <?php echo $currentMonth ?>, <?php echo $currentYear ?>
+            </h1>
+            <div class="text-xl text-center flex items-center gap-4 font-[Roboto] my-5">
+                <p>Price Starting At</p> 
+                <h2 class="md:text-4xl text-3xl font-extrabold my-4 flex items-start text-[#96B93A]">
                     <span class="md:text-3xl text-base">$</span><?php echo $price ?>
                     <span class="grid">
                         <span class="md:text-3xl text-base"><sub>/mo</sub></span>
                     </span>
                 </h2>
-                
-            </div>
-            <div class="md:w-1/2 w-full md:block hidden">
             </div>
         </div>
     </div>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/business.webp" class="absolute right-0 z-10 bottom-0 w-72"/>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-20 w-[800px]"/>
 </section>
 
 <section class="bgmain px-4 py-5 shadow-sm border-y border-zinc-400/20 z-50">
@@ -551,33 +537,32 @@
 
 <section class="my-16">
     <div class="container mx-auto px-4">
-        <div class="mb-10"><h2 class="text-2xl font-bold">Switch to <?php echo the_title(); ?> And Get Benefits You’ll Love</h2></div>
-        <div class="grid md:grid-cols-3 grid-cols-1 gap-7">
-       
+        <div class="mb-20"><h2 class="text-2xl font-bold">Switch to <?php echo the_title(); ?> And Get Benefits You’ll Love</h2></div>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-y-14 gap-x-5">
             <?php if (have_rows('features_block')):
                 while (have_rows('features_block')):
-
                     the_row();
                     $title = get_sub_field('title');
                     $details = get_sub_field('details');
                     $icon = get_sub_field('icon');
-                    ?>
-                            <div class="block rounded-xl border border-gray-100 px-8 py-10 shadow-xl transition hover:border-[#6041BB]/10 hover:shadow-[#6041BB]/10">
-                                    <span class="text-4xl !text-[#6041BB] text-center block w-fit mx-auto">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M6.97 2.47a.75.75 0 011.06 0l4.5 4.5a.75.75 0 01-1.06 1.06L8.25 4.81V16.5a.75.75 0 01-1.5 0V4.81L3.53 8.03a.75.75 0 01-1.06-1.06l4.5-4.5zm9.53 4.28a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V7.5a.75.75 0 01.75-.75z"
-                                                clip-rule="evenodd"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                <h2 class="mt-5 text-xl font-bold text-center"><?php echo $title; ?></h2>
-                                <p class="mt-5 text-base text-center"><?php echo $details; ?></p>
-                            </div>
-
-                        <?php
-                endwhile; ?>               
+                ?>
+                <div class="w-full py-7 px-4 relative transform hover:-translate-y-3 transition-all duration-300 ease-in-out bg-[#fff] border 
+                    [&:nth-child(2)]:bg-[#E7E2FE] [&:nth-child(4)]:bg-[#E7E2FE] [&:nth-child(6)]:bg-[#E7E2FE]">
+                    <div class="mt-5">
+                        <span class="block absolute border border-[#E7E2FE] -top-10 left-1/2 -translate-x-1/2 rounded-full w-fit mx-auto p-4 bg-[#fff]">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" height="2em" width="2em">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M6.97 2.47a.75.75 0 011.06 0l4.5 4.5a.75.75 0 01-1.06 1.06L8.25 4.81V16.5a.75.75 0 01-1.5 0V4.81L3.53 8.03a.75.75 0 01-1.06-1.06l4.5-4.5zm9.53 4.28a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V7.5a.75.75 0 01.75-.75z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                        </span>
+                        <h2 class="mt-5 text-center text-base font-bold text-[#071F37] pt-4"><?php echo $title; ?></h2>
+                        <div><p class="px-5 mt-5 text-base text-center text-[#464646]"><?php echo $details; ?></p></div>
+                    </div>
+            </div>
+                <?php endwhile; ?>               
             <?php
             endif; ?>
            
