@@ -79,7 +79,7 @@
 
 
 
-<section class="py-14 flex items-center bg-gray-50 relative border-b-[2px] overflow-y-hidden">
+<section class="py-14 flex items-center bg-gray-50 relative border-b-[2px] ">
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
@@ -93,7 +93,7 @@
         </div>
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/images/business.webp" class="absolute right-0 z-10 bottom-0 w-72"/>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-20 w-[800px]"/>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-0 w-[800px]"/>
 </section>
 
 <section class="my-16">
