@@ -103,9 +103,9 @@
                 <span class="text-[#96B93A]"><?php echo FormatData($city)?> </span>
             </h2>
         </div>
-        <div class="mb-7 flex justify-between items-center">
+        <div class="mb-7 flex sm:flex-row gap-4 flex-col justify-between items-center">
             <?php get_template_part( 'template-parts/types', 'routing' ); ?>
-            <div class="flex gap-2 items-center">
+            <div class="flex sm:flex-row flex-col gap-2 sm:items-center">
                 <p class="font-medium">Sort By:</p>
                 <div  class="bg-[#96B93A] rounded-[6px] pr-2">
                     <select class="p-2 bg-transparent  border-none focus:border-none">
