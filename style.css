@@ -423,3 +423,44 @@ footer {
   margin-bottom: 10px;
   padding-bottom: 10px !important;
 }
+
+.pros h2{
+  background-color: #96B93A;
+  padding: 10px 1.5rem;
+  color: #fff;
+}
+.cons h2{
+  background-color: #be2626;
+  padding: 10px 1.5rem;
+  color: #fff;
+}
+
+.pros ul li:before,
+.cons ul li:before{
+  background: #be2626;
+  width: 48px;
+  height: 48px;
+  color: #FFF;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pros ul li:before{
+  background-color: #96B93A;
+}
+
+.pros ul li,
+.cons ul li{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.pros ul li{
+  background-color: #95b93a3c;
+}
+.cons ul li{
+  background: #be262635;
+}

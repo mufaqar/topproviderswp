@@ -1703,11 +1703,6 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -2766,6 +2761,50 @@ footer {
   padding-bottom: 10px !important;
 }
 
+.pros h2{
+  background-color: #96B93A;
+  padding: 10px 1.5rem;
+  color: #fff;
+}
+
+.cons h2{
+  background-color: #be2626;
+  padding: 10px 1.5rem;
+  color: #fff;
+}
+
+.pros ul li:before,
+.cons ul li:before{
+  background: #be2626;
+  width: 48px;
+  height: 48px;
+  color: #FFF;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pros ul li:before{
+  background-color: #96B93A;
+}
+
+.pros ul li,
+.cons ul li{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.pros ul li{
+  background-color: #95b93a3c;
+}
+
+.cons ul li{
+  background: #be262635;
+}
+
 .hover\:-translate-y-3:hover {
   --tw-translate-y: -0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3158,10 +3197,6 @@ footer {
 
   .md\:mt-20 {
     margin-top: 5rem;
-  }
-
-  .md\:block {
-    display: block;
   }
 
   .md\:flex {
@@ -3598,41 +3633,14 @@ footer {
   }
 }
 
-.\[\&\:nth-child\(2\)\]\:bg-gray-100:nth-child(2) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.\[\&\:nth-child\(2\)\]\:bg-\[E7E2FE\]:nth-child(2) {
-  background-color: E7E2FE;
-}
-
 .\[\&\:nth-child\(2\)\]\:bg-\[\#E7E2FE\]:nth-child(2) {
   --tw-bg-opacity: 1;
   background-color: rgb(231 226 254 / var(--tw-bg-opacity));
 }
 
-.\[\&\:nth-child\(4\)\]\:bg-gray-100:nth-child(4) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.\[\&\:nth-child\(4\)\]\:bg-\[E7E2FE\]:nth-child(4) {
-  background-color: E7E2FE;
-}
-
 .\[\&\:nth-child\(4\)\]\:bg-\[\#E7E2FE\]:nth-child(4) {
   --tw-bg-opacity: 1;
   background-color: rgb(231 226 254 / var(--tw-bg-opacity));
-}
-
-.\[\&\:nth-child\(6\)\]\:bg-gray-100:nth-child(6) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.\[\&\:nth-child\(6\)\]\:bg-\[E7E2FE\]:nth-child(6) {
-  background-color: E7E2FE;
 }
 
 .\[\&\:nth-child\(6\)\]\:bg-\[\#E7E2FE\]:nth-child(6) {
