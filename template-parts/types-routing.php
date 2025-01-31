@@ -31,33 +31,45 @@
     function containsText($string, $matchText) {
         return strpos($string, $matchText) !== false;
     }
-
+    
+    // Function to determine the active type
+    function getActiveType($inputString) {
+        $activeType = '';
+    
+        if (containsText($inputString, "internet-tv")) {
+            $activeType = "internet-tv";
+        } elseif (containsText($inputString, "tv")) {
+            $activeType = "tv";
+        } elseif (containsText($inputString, "internet")) {
+            $activeType = "internet";
+        }
+    
+        return $activeType;
+    }
 ?>
 
 
-<section class="bg-[#6041BB] py-4 shadow-sm border-y border-zinc-400/20 sticky top-0">
-    <div class="container mx-auto px-4">
+<section class="">
+    <div class="container mx-auto">
         <div>
-            <ul class="flex md:gap-3 gap-1.5 items-center">
+            <ul class="flex md:gap-5 gap-1.5 items-center">
                 <?php 
                 foreach ($links as $label => $href): 
-                    // Check if $type is contained in $href
-                    $isActive = containsText($href, $type)
+                    $isActive = getActiveType($type)
                 ?>
                     <li>
-                        <a class="hover:bg-[#111] hover:text-[#fff] !bg-[#fff] !text-[#6041BB] md:text-base text-xs text-center inline-block w-full font-medium md:px-3 px-1.5 py-1.5 rounded-3xl <?php 
-                            // Add the active class if $isActive is true
-                            // if ($isActive) {
-                            //     echo "!bg-[#fff] !text-[#6041BB]";
-                            // } else{
-                            //     echo "text-white";
-                            // }
-                        ?>" href="<?php echo htmlspecialchars($href, ENT_QUOTES, 'UTF-8'); ?>">
+                        <?php 
+                            $activeClass = (strpos($href, '/'.$type.'/') !== false) ? 'active-type' : '';
+                        ?>
+                        <a class="border-b-[2px] border-transparent hover:text-[#6041BB] <?php echo $activeClass; ?> pb-2 text-black md:text-base text-xs text-center inline-block w-full font-medium"
+                        href="<?php echo htmlspecialchars($href, ENT_QUOTES, 'UTF-8'); ?>">
                             <?php echo htmlspecialchars($label, ENT_QUOTES, 'UTF-8'); ?>
                         </a>
                     </li>
+
                 <?php endforeach; ?>
             </ul>
         </div>
     </div>
+    <div class="border-b-[2px] w-full -mt-[2px]"></div>
 </section>

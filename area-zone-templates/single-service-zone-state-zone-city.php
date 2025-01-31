@@ -79,7 +79,7 @@
 
 
 
-<section class="py-14 flex items-center bg-gray-50 relative">
+<section class="py-14 flex items-center bg-gray-50 relative border-b-[2px] overflow-y-hidden">
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
@@ -96,14 +96,25 @@
     <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-20 w-[800px]"/>
 </section>
 
-<?php get_template_part( 'template-parts/types', 'routing' ); ?>
-
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
             <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo FormatData($state);?>
                 <span class="text-[#96B93A]"><?php echo FormatData($city)?> </span>
             </h2>
+        </div>
+        <div class="mb-7 flex justify-between items-center">
+            <?php get_template_part( 'template-parts/types', 'routing' ); ?>
+            <div class="flex gap-2 items-center">
+                <p class="font-medium">Sort By:</p>
+                <div  class="bg-[#96B93A] rounded-[6px] pr-2">
+                    <select class="p-2 bg-transparent  border-none focus:border-none">
+                        <option value="">Recommended</option>
+                        <option value="">Speed</option>
+                        <option value="">Avg. User Rating</option>
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <?php

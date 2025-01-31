@@ -464,3 +464,7 @@ footer {
 .cons ul li{
   background: #be262635;
 }
+
+.active-type{
+  border-color: black;
+}
