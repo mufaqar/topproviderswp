@@ -692,6 +692,10 @@ video {
   top: 1rem !important;
 }
 
+.-bottom-0 {
+  bottom: -0px;
+}
+
 .-bottom-20 {
   bottom: -5rem;
 }
@@ -734,10 +738,6 @@ video {
 
 .top-3 {
   top: 0.75rem;
-}
-
-.-bottom-0 {
-  bottom: -0px;
 }
 
 .\!z-\[11111\] {
@@ -1422,10 +1422,6 @@ video {
 
 .\!overflow-x-auto {
   overflow-x: auto !important;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .overflow-x-scroll {

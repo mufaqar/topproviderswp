@@ -105,11 +105,13 @@ $query_fast = new WP_Query($query_args_fast);
         </div>
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/images/business.webp" class="absolute right-0 z-10 bottom-0 w-72"/>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-20 w-[800px]"/>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-0 w-[800px]"/>
 </section>
 
 
-<?php get_template_part( 'template-parts/types', 'routing' ); ?>
+<div class="container mx-auto px-4 mt-20 flex">
+    <?php get_template_part( 'template-parts/types', 'routing' ); ?>
+</div>
 
 
 <section class="my-16">
