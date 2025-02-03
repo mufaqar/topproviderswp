@@ -99,13 +99,13 @@
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo FormatData($state);?>
+            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10"><?php echo $type ?> Providers in <?php echo FormatData($state);?>
                 <span class="text-[#96B93A]"><?php echo FormatData($city)?> </span>
             </h2>
         </div>
         <div class="mb-7 flex sm:flex-row gap-4 flex-col justify-between items-center">
             <?php get_template_part( 'template-parts/types', 'routing' ); ?>
-            <div class="flex sm:flex-row flex-col gap-2 sm:items-center">
+            <div class="flex gap-2 items-center">
                 <p class="font-medium">Sort By:</p>
                 <div  class="bg-[#96B93A] rounded-[6px] pr-2">
                     <select class="p-2 bg-transparent  border-none focus:border-none">

@@ -3426,6 +3426,10 @@ footer {
     padding-bottom: 0px;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
   .md\:text-start {
     text-align: start;
   }

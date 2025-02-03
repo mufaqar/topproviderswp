@@ -109,16 +109,25 @@ $query_fast = new WP_Query($query_args_fast);
 </section>
 
 
-<div class="container mx-auto px-4 mt-20 flex">
-    <?php get_template_part( 'template-parts/types', 'routing' ); ?>
-</div>
-
-
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10"><?php echo $type ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?> </span></h2>
+            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10"><?php echo $type ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?> </span></h2>
         </div>
+        <div class="mb-7 flex sm:flex-row gap-4 flex-col justify-between items-center">
+            <?php get_template_part( 'template-parts/types', 'routing' ); ?>
+            <div class="flex gap-2 items-center">
+                <p class="font-medium">Sort By:</p>
+                <div  class="bg-[#96B93A] rounded-[6px] pr-2">
+                    <select class="p-2 bg-transparent  border-none focus:border-none">
+                        <option value="">Recommended</option>
+                        <option value="">Speed</option>
+                        <option value="">Avg. User Rating</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
 
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <?php
