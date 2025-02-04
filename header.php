@@ -48,8 +48,8 @@ function get_full_url() {
             </svg>
         </a>
     </div>
-    <nav class=" border-gray-200 px-4 lg:px-6 py-2 md:py-5 ">
-        <div class="grid grid-cols-3 items-center mx-auto max-w-screen-xl">
+    <nav class=" border-gray-200 py-2 md:py-5 ">
+        <div class="grid grid-cols-3 items-center mx-auto container px-4">
             <a href="<?php bloginfo('url'); ?>" class="flex items-center lg:justify-center lg:order-2">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.webp" class="mr-3 h-6 sm:h-9 invert" alt="top providers Logo" />
             </a>

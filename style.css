@@ -20,8 +20,14 @@ html {
   scroll-behavior: smooth;
 }
 .container {
-  max-width: 1110px !important;
+  max-width: 1700px !important;
   width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+  .container{
+    padding: 0 3rem;
+  }
 }
 
 .bgmain {
@@ -336,9 +342,9 @@ html {
   position: absolute;
 }
 
-.container{
+/* .container{
   max-width: 1280px !important;
-}
+} */
 
 .menu-item{
   position: relative !important;
@@ -467,4 +473,21 @@ footer {
 
 .active-type{
   border-color: black;
+}
+
+.block_content ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.block_content li {
+  display: flex;
+  align-items: center;
+}
+
+.block_content li::before {
+  content: "✦";
+  display: inline-block;
+  width: 24px;
+  height: 25px;
 }
