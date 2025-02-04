@@ -486,8 +486,9 @@ footer {
 }
 
 .block_content li::before {
-  content: "✦";
+  content: "➤";
   display: inline-block;
   width: 24px;
   height: 25px;
+  margin-right: 8px;
 }
