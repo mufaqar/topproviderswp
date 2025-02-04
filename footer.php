@@ -119,12 +119,72 @@ $providersData = [
   ]
 ];
 
+$states = [
+    [
+        'name' => 'Taxes',
+        'link' => '/internet/tx',
+    ],
+    [
+        'name' => 'California',
+        'link' => '/internet/ca',
+    ],
+    [
+        'name' => 'Alaska',
+        'link' => '/internet/ak',
+    ],
+    [
+        'name' => 'Los Angeles',
+        'link' => '/internet/la',
+    ],
+    [
+        'name' => 'New Mexico',
+        'link' => '/internet/nm',
+    ],
+    [
+        'name' => 'Hawaii',
+        'link' => '/internet/hi',
+    ],
+    [
+        'name' => 'Washington',
+        'link' => '/internet/wa',
+    ],
+];
 
+$citieslist = [
+    [
+        'name' => 'Conestee',
+        'link' => 'internet/sc/conestee',
+    ],
+    [
+        'name' => 'Arvada',
+        'link' => 'internet/co/arvada',
+    ],
+    [
+        'name' => 'Washington',
+        'link' => '/internet/dc/washington/',
+    ],
+    [
+        'name' => 'New Kent',
+        'link' => '/internet/va/new-kent/',
+    ],
+    [
+        'name' => 'Atlanta',
+        'link' => '/internet/ga/atlanta/',
+    ],
+    [
+        'name' => 'omaha',
+        'link' => '/internet/ne/omaha/',
+    ],
+    [
+        'name' => 'Clara',
+        'link' => '/internet/ms/clara/',
+    ],
+]
 
 ?>
 
 <footer class="w-full image-overlay" style="background-image: linear-gradient(0deg, rgba(3, 7, 18, 1), rgba(3, 7, 18, 0.9)), url('<?php echo get_template_directory_uri(); ?>/images/fbg.jpg')">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="px-4 sm:px-6 lg:px-8">
         <!--Grid-->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
@@ -151,7 +211,11 @@ $providersData = [
                         </defs>
                         </svg>
                 </a>
-                <p class="py-8 text-sm text-gray-400 lg:max-w-xs text-center lg:text-left">Top Providers: Your go-to source for the best internet, TV, and home bundles. Compare plans, find deals, and connect with top providers effortlessly.</p>
+                <p class="py-8 text-lg text-gray-400  text-center lg:text-left">Top Providers: Your go-to source for the best internet, TV, and home bundles. Compare plans, find deals, and connect with top providers effortlessly.</p>
+                <div class="bg-gray-800 flex items-center pr-4 pl-2 mb-6 w-full md:max-w-[350px]">
+                    <input class="p-4 w-full bg-transparent outline-none text-white border-none" placeholder="Your Email"/>
+                    <svg width="30px" height="30px" viewBox="0 0 48 48" id="b"><defs><style>.c{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="c" d="m33.363,41.0276l-6.8415-19.5491,13.9784-13.9784-7.137,33.5276Zm-1.3742,3.4724l-8.2304-20.2584-6.014,6.014,14.2444,14.2444Z"/><polyline class="c" points="6.9724 14.637 40.5 7.5 26.5216 21.4784 6.9724 14.637"/><polyline class="c" points="3.5 16.0112 17.7444 30.2556 23.7584 24.2416 3.5 16.0112"/></svg>
+                </div>
                 <a href="/contact-us"  class="py-2.5 px-5 h-9 block w-fit bg-[#6746C8] rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
                     Contact us
                 </a>
@@ -169,10 +233,10 @@ $providersData = [
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left ">
-                <h4 class="text-lg text-white font-medium mb-7 !opacity-0">Providers</h4>
+                <h4 class="text-lg text-white font-medium mb-7 ">Top Cities</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <?php
-                        foreach (array_slice($providersData, 7, 7) as $provider) {
+                        foreach ($citieslist as $provider) {
                             echo "<li class='mb-4'><a href='{$provider['link']}' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
                         }
                     ?>
@@ -180,10 +244,10 @@ $providersData = [
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left ">
-                <h4 class="text-lg text-white font-medium mb-7 !opacity-0">Providers</h4>
+                <h4 class="text-lg text-white font-medium mb-7">Top State</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <?php
-                        foreach (array_slice($providersData, 14) as $provider) {
+                        foreach ($states as $provider) {
                             echo "<li class='mb-4'><a href='{$provider['link']}' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
                         }
                     ?>
@@ -191,7 +255,7 @@ $providersData = [
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left ">
-                <h4 class="text-lg text-white font-medium mb-7">Support</h4>
+                <h4 class="text-lg text-white font-medium mb-7">Legal                </h4>
                 <ul class="text-sm  transition-all duration-500">
                     <?php 
                         foreach (array_slice($navLinks, 0, 11) as $otherpage) {
