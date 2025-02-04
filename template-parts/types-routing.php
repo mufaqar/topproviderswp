@@ -50,7 +50,7 @@
 
 
 <section class="">
-    <div class="container mx-auto">
+    <div class="">
         <div>
             <ul class="flex md:gap-5 gap-1.5 items-center">
                 <?php 

@@ -37,8 +37,8 @@ $providers_query = new WP_Query($argsForProvider);
 ?>
 
 <!-- Hero Section -->
-<section class="xl:min-h-[calc(100vh-330px)] xl:h-[calc(100vh-330px)] flex items-center bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/50" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/main.jpg');">
-  <div class="max-w-[1280px] w-full mx-auto px-4 gap-7 items-center">
+<section class="xl:min-h-[calc(100vh-245px)] xl:h-[calc(100vh-330px)] flex items-center bg-cover bg-center bg-no-repeat bg-blend-overlay bg-black/50" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/main.jpg');">
+  <div class="container w-full mx-auto px-4 gap-7 items-center">
     <div class="py-10">
       <h1 class="text-3xl md:text-5xl text-left md:leading-tight font-semibold text-white">Find the Best  <span class="text-[#96B93A]">TV, Internet, <br/> Landline Providers </span> in Your Area.</h1>
       <p class="text-[22px] text-left font-normal text-white my-5">Compare Top Providers, plans and deals by ZIP code.</p>
@@ -53,9 +53,9 @@ $providers_query = new WP_Query($argsForProvider);
 </section>
 
 <!-- // Hero Bottom -->
-<section id="search" class="py-12 w-full bg-cover bg-no-repeat"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/main-bottom.webp');">
-  <div class="max-w-[1280px] w-full px-4 mx-auto items-center flex flex-col md:flex-row gap-6 md:gap-10">
-    <h2 class="text-3xl md:text-5xl text-left md:leading-tight font-bold">Search and Find Your Providers</h2>
+<section id="search" class="py-12 w-full bg-cover bg-no-repeat"  style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo get_template_directory_uri(); ?>/images/main-bottom.webp');">
+  <div class="container w-full px-4 mx-auto items-center flex flex-col md:flex-row gap-6 md:gap-10">
+    <h2 class="text-3xl md:text-5xl text-white text-left md:leading-tight font-bold">Search and Find Your Providers</h2>
     <div class="!max-w-[712px] w-full ml-auto">
       <?php get_template_part('template-parts/search', 'form'); ?>
     </div>
