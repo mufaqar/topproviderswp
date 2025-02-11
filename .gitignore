@@ -1,0 +1,19 @@
+# Ignore compiled output, build directories, and binaries
+/node_modules
+/build
+
+# Ignore log and temp files
+*.log
+*.tmp
+
+# Ignore configuration files with sensitive data
+config.json
+secrets.json
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor specific files
+.vscode/
+.idea/
