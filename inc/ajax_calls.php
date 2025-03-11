@@ -1,6 +1,6 @@
 <?php
 
-function handle_form_submission() {
+function handle_contact_form_submission() {
     // Check nonce for security (if added in the form)
     if (!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'ajax_form_nonce')) {
         wp_send_json_error(['message' => 'Invalid nonce.']);
@@ -33,5 +33,5 @@ function handle_form_submission() {
 
     wp_die();
 }
-add_action('wp_ajax_submit_form', 'handle_form_submission');
-add_action('wp_ajax_nopriv_submit_form', 'handle_form_submission');
+add_action('wp_ajax_handle_contact_form_submission', 'handle_contact_form_submission');
+add_action('wp_ajax_nopriv_handle_contact_form_submission', 'handle_contact_form_submission');
