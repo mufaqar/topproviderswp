@@ -61,74 +61,81 @@ get_header();
            
         </div>
         <div class="w-full bg-blue-50  flex items-center justify-center">
-            <form class="p-10 w-full">
-                <input type="hidden" name="action" value="submit_form">
-                <?php wp_nonce_field('ajax_form_nonce'); ?>
-                <div class="md:flex w-full gap-5 items-center">
-                    <div class="md:w-1/2 flex flex-col">
-                        <label class="text-base font-semibold leading-none">Name</label>
-                        <input
-                            name="name"
-                            tabindex="0"
-                            arial-label="Please input name"
-                            type="name"
-                            class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-white border rounded border-gray-200 placeholder-gray-100"
-                            placeholder="Please input name"
-                        />
-                    </div>
-                    <div class="md:w-1/2 flex flex-col md:mt-0 mt-7">
-                        <label class="text-base font-semibold leading-none">Email</label>
-                        <input
-                            name="email"
-                            type="email"
-                            class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-white border rounded border-gray-200 placeholder-gray-100"
-                            placeholder="Please input email address"
-                        />
-                    </div>
+        <form id="contactForm" class="p-10 w-full">
+            <input type="hidden" name="action" value="submit_form">
+            <?php wp_nonce_field('ajax_form_nonce'); ?>
+
+            <div class="md:flex w-full gap-5 items-center">
+                <div class="md:w-1/2 flex flex-col">
+                    <label class="text-base font-semibold leading-none">Name</label>
+                    <input name="name" type="text" class="text-base p-3 border rounded mt-4" placeholder="Enter your name" required />
                 </div>
-                <div class="md:flex w-full gap-5 items-center mt-8">
-                    <div class="md:w-1/2 flex flex-col">
-                        <label class="text-base font-semibold leading-none">Phone number</label>
-                        <input
-                            name="phone"
-                            type="tel"
-                            class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-white border rounded border-gray-200 placeholder-gray-100"
-                            placeholder="Phone number"
-                        />
-                    </div>
-                    <div class="md:w-1/2 flex flex-col md:mt-0 mt-7">
-                        <label class="text-base font-semibold leading-none">Subject</label>
-                        <select name="subject" id="subject" class="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-white border rounded border-gray-200 placeholder-gray-100">
-                            <option>Select a Subject</option>
-                            <option value="Customer Service">Customer Service Support</option>
-                            <option value="New Service for my Home">New Service for my Home</option>
-                            <option value="Advertising Opportunities">Advertising Opportunities</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
+                <div class="md:w-1/2 flex flex-col">
+                    <label class="text-base font-semibold leading-none">Email</label>
+                    <input name="email" type="email" class="text-base p-3 border rounded mt-4" placeholder="Enter your email" required />
                 </div>
-                <div>
-                    <div class="w-full flex flex-col mt-8">
-                        <label class="text-base font-semibold leading-none">Comments</label>
-                        <textarea
-                            name="comment"
-                            tabindex="0"
-                            aria-label="leave a Comments"
-                            role="textbox"
-                            class="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-white border rounded border-gray-200 placeholder-gray-100 resize-none"
-                        ></textarea>
-                    </div>
+            </div>
+
+            <div class="md:flex w-full gap-5 items-center mt-8">
+                <div class="md:w-1/2 flex flex-col">
+                    <label class="text-base font-semibold leading-none">Phone</label>
+                    <input name="phone" type="tel" class="text-base p-3 border rounded mt-4" placeholder="Enter phone number" />
                 </div>
-                <div class="flex items-center justify-center w-full"><input type="submit" class="mt-9 text-base font-semibold leading-none text-white py-4 px-10 cursor-pointer hover:bg-[#96B93A] bg-[#044FC3] w-full" value="SUBMIT" /></div>
-            </form>
+                <div class="md:w-1/2 flex flex-col">
+                    <label class="text-base font-semibold leading-none">Subject</label>
+                    <select name="subject" class="text-base p-3 border rounded mt-4" required>
+                        <option value="">Select a Subject</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="New Service">New Service</option>
+                        <option value="Advertising">Advertising</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col mt-8">
+                <label class="text-base font-semibold leading-none">Comments</label>
+                <textarea name="comment" class="h-36 text-base p-3 border rounded mt-4 resize-none" required></textarea>
+            </div>
+
+            <div class="flex items-center justify-center w-full">
+                <button type="submit" class="mt-9 text-base font-semibold text-white py-4 px-10 bg-blue-600 w-full">
+                    Submit
+                </button>
+            </div>
+        </form>
         </div>
     </div>
 </section>
 
-
-
-
                                             
+<script>
+    jQuery(document).ready(function ($) {
+        $("form").submit(function (e) {
+            e.preventDefault(); // Prevent default form submission
+            var formData = new FormData(this); // Collect form data
+            $.ajax({
+                type: "POST",
+                url: "<?php echo admin_url('admin-ajax.php'); ?>",
+                data: formData,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.data.message);
+                        $("form")[0].reset(); // Reset form fields
+                    } else {
+                        alert(response.data.message);
+                    }
+                },
+                error: function () {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        });
+    });
+</script>
 
 
 <?php get_footer(); ?>
