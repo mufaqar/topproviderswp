@@ -41,7 +41,7 @@ $providers_query = new WP_Query($argsForProvider);
   <div class="container w-full mx-auto px-4 gap-7 items-center">
     <div class="py-10">
       <h1 class="text-3xl md:text-5xl text-left md:leading-tight font-semibold text-white">Find the Best  <span class="text-[#96B93A]">TV, Internet, <br/> Landline Providers </span> in Your Area.</h1>
-      <p class="text-[22px] text-left font-normal text-white my-5">Compare Top Providers, plans and deals by ZIP code.</p>
+      <p class="text-[22px] text-left font-normal text-white my-5">Compare Top Providers, Plans and Deals by ZIP code.</p>
       <ul class="type-list text-white ml-12 flex flex-col gap-2 text-lg">
         <li class="relative">Home Broadband</li>
         <li class="relative">Satellite TV</li>
