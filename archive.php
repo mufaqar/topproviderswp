@@ -9,7 +9,7 @@
 
 get_header();
 
-Softsgens@1564
+// Softsgens@1564
 ?>
 
 	<main id="primary" class="site-main">
