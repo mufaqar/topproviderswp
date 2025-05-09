@@ -4,7 +4,7 @@
         <div class="!max-w-[712px] w-full mx-auto">
             <?php get_template_part('template-parts/search', 'form'); ?>
         </div>
-        <svg viewBox="0 0 800 600" class="rsm-svg">
+        <!-- <svg viewBox="0 0 800 600" class="rsm-svg">
             <g class="rsm-geographies">
                 <path
                     tabindex="0"
@@ -855,6 +855,6 @@
                 </g>
 
             </g>
-        </svg>
+        </svg> -->
     </div>
 </section>
