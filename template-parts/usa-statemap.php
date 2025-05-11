@@ -1,6 +1,6 @@
 <section class="py-16 bg-[#6746C8]">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-5xl text-center md:leading-tight font-bold text-white mb-10">Find Top Internet Providers by State</h2>
+        <h2 class="text-3xl md:text-5xl text-center md:leading-tight font-bold text-white mb-10">Find Top Internet Providers by State In UK</h2>
         <div class="!max-w-[712px] w-full mx-auto">
             <?php get_template_part('template-parts/search', 'form'); ?>
         </div>
