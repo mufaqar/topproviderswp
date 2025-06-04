@@ -272,10 +272,11 @@ function Generate_Description_For_City() {
 
 function Generate_Title_For_State() {
     global $wp_query;
-    $state = $wp_query->query_vars['zone_state'];
-    $city = $wp_query->query_vars['zone_city'];
-    $zipcode = $wp_query->query_vars['post_slug'];
-    $type =$wp_query->query_vars['service'];
+   
+    $state   = isset($wp_query->query_vars['zone_state']) ? $wp_query->query_vars['zone_state'] : '';
+    $city    = isset($wp_query->query_vars['zone_city']) ? $wp_query->query_vars['zone_city'] : '';
+    $zipcode = isset($wp_query->query_vars['post_slug']) ? $wp_query->query_vars['post_slug'] : '';
+    $type    = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
 
     if($type === "internet"){
         return "Top $type Providers in $state |  Top Providers";
@@ -308,10 +309,10 @@ function Generate_Description_For_State() {
 
 function Generate_Canonical_Tag($canonical) {
     global $wp_query;
-    $state = $wp_query->query_vars['zone_state'];
-    $city = $wp_query->query_vars['zone_city'];
-    $zipcode = $wp_query->query_vars['post_slug'];
-    $type =$wp_query->query_vars['service'];
+    $state   = isset($wp_query->query_vars['zone_state']) ? $wp_query->query_vars['zone_state'] : '';
+    $city    = isset($wp_query->query_vars['zone_city']) ? $wp_query->query_vars['zone_city'] : '';
+    $zipcode = isset($wp_query->query_vars['post_slug']) ? $wp_query->query_vars['post_slug'] : '';
+    $type    = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
 
     if($zipcode){
         return home_url("/$type/$state/$city/$zipcode/");

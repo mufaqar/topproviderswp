@@ -2,10 +2,11 @@
 
 global $wp_query;
 
-$state = $wp_query->query_vars['zone_state'];
-$city = $wp_query->query_vars['zone_city'];
-$zipcode = $wp_query->query_vars['post_slug'];
-$type =$wp_query->query_vars['service'];
+// Define all variables first
+$zone_state = isset($wp_query->query_vars['zone_state']) ? $wp_query->query_vars['zone_state'] : '';
+$zone_city = isset($wp_query->query_vars['zone_city']) ? $wp_query->query_vars['zone_city'] : '';
+$post_slug = isset($wp_query->query_vars['post_slug']) ? $wp_query->query_vars['post_slug'] : '';
+$service_type = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
 
 
 add_filter('wpseo_title', 'Generate_Title_For_State');
@@ -80,15 +81,15 @@ get_header();
          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
          <?php
          // Query the posts
-             if ($query->have_posts()) {
-                 while ($query->have_posts()) { $query->the_post(); $i++; set_query_var('provider_index', $i);     
-                     get_template_part( 'template-parts/provider', 'card' );
-                 }
-             } else {
-                 echo 'No providers found with the specified zip code.';
-             }
-             // Reset post data
-             wp_reset_postdata();
+            //  if ($query->have_posts()) {
+            //      while ($query->have_posts()) { $query->the_post(); $i++; set_query_var('provider_index', $i);     
+            //          get_template_part( 'template-parts/provider', 'card' );
+            //      }
+            //  } else {
+            //      echo 'No providers found with the specified zip code.';
+            //  }
+            //  // Reset post data
+            //  wp_reset_postdata();
          ?>
          </div>
          <div><p class="text-sm font-[Roboto] mt-10">*DISCLAIMER: Availability vary by service address. not all offers available in all areas, pricing subject to change at any time. Additional taxes, fees, and terms may apply.</p></div>
