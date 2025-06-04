@@ -107,6 +107,8 @@ function custom_template_include($template) {
     // Define a dynamic template directory path
     $dynamic_template_dir = 'area-zone-templates/';
 
+    $new_template = '';
+
     // Determine the appropriate template based on the query variables
     if ($service && $zone_state && $zone_city && $post_slug) {
         // Full URL: /service/zone_state/zone_city/post_slug

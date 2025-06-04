@@ -226,7 +226,7 @@ $citieslist = [
                 <ul class="text-sm  transition-all duration-500">
                     <?php 
                         foreach (array_slice($providersData, 0, 7) as $provider) {
-                            echo "<li class='mb-4'><a href='{$provider['link']}' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
+                            echo "<li class='mb-4'><a href='" . home_url($provider['link']) . "' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
                         }                
                     ?>
                 </ul>
@@ -237,7 +237,7 @@ $citieslist = [
                 <ul class="text-sm  transition-all duration-500">
                     <?php
                         foreach ($citieslist as $provider) {
-                            echo "<li class='mb-4'><a href='{$provider['link']}' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
+                            echo "<li class='mb-4'><a href='" . home_url($provider['link']) . "' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
                         }
                     ?>
                 </ul>
@@ -248,7 +248,7 @@ $citieslist = [
                 <ul class="text-sm  transition-all duration-500">
                     <?php
                         foreach ($states as $provider) {
-                            echo "<li class='mb-4'><a href='{$provider['link']}' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
+                            echo "<li class='mb-4'><a href='" . home_url($provider['link']) . "' class='text-gray-400 hover:text-gray-100'>{$provider['name']}</a></li>";
                         }
                     ?>
                 </ul>
@@ -259,7 +259,7 @@ $citieslist = [
                 <ul class="text-sm  transition-all duration-500">
                     <?php 
                         foreach (array_slice($navLinks, 0, 11) as $otherpage) {
-                            echo "<li class='mb-4'><a href='{$otherpage['link']}' class='text-gray-400 hover:text-gray-100'>{$otherpage['name']}</a></li>";
+                            echo "<li class='mb-4'><a href='" . home_url($otherpage['link']) . "' class='text-gray-400 hover:text-gray-100'>{$otherpage['name']}</a></li>";
                         }                        
                     ?>
                 </ul>
