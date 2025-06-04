@@ -6,7 +6,7 @@ global $wp_query;
 $zone_state = isset($wp_query->query_vars['zone_state']) ? $wp_query->query_vars['zone_state'] : '';
 $zone_city = isset($wp_query->query_vars['zone_city']) ? $wp_query->query_vars['zone_city'] : '';
 $post_slug = isset($wp_query->query_vars['post_slug']) ? $wp_query->query_vars['post_slug'] : '';
-$service_type = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
+$type = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
 
 
 add_filter('wpseo_title', 'Generate_Title_For_State');
@@ -16,7 +16,7 @@ add_filter('wpseo_canonical', 'Generate_Canonical_Tag');
 get_header();
 
 
-    $zip_codes_to_search = get_zipcodes_by_state($state);
+    $zip_codes_to_search = get_zipcodes_by_state($zone_state);
     $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
         if (!empty($provider_ids)) {    
                 $query_args = array(
@@ -33,7 +33,7 @@ get_header();
 
     $i = 0;
 
-    $state = strtoupper($state);
+    $state = strtoupper($zone_state);
 
 
  
@@ -80,16 +80,16 @@ get_header();
 
          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
          <?php
-         // Query the posts
-            //  if ($query->have_posts()) {
-            //      while ($query->have_posts()) { $query->the_post(); $i++; set_query_var('provider_index', $i);     
-            //          get_template_part( 'template-parts/provider', 'card' );
-            //      }
-            //  } else {
-            //      echo 'No providers found with the specified zip code.';
-            //  }
-            //  // Reset post data
-            //  wp_reset_postdata();
+        
+             if ($query->have_posts()) {
+                 while ($query->have_posts()) { $query->the_post(); $i++; set_query_var('provider_index', $i);     
+                     get_template_part( 'template-parts/provider', 'card' );
+                 }
+             } else {
+                 echo 'No providers found with the specified zip code.';
+             }
+             // Reset post data
+             wp_reset_postdata();
          ?>
          </div>
          <div><p class="text-sm font-[Roboto] mt-10">*DISCLAIMER: Availability vary by service address. not all offers available in all areas, pricing subject to change at any time. Additional taxes, fees, and terms may apply.</p></div>
