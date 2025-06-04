@@ -73,6 +73,12 @@ get_header();
         ) );
         ?>
     </div>
+
+
+            
+    
+
+
     <?php
     // Reset post data after custom query
     wp_reset_postdata();

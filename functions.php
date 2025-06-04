@@ -1,4 +1,5 @@
 <?php
+
 /**
  * tp_theme functions and definitions
  *

@@ -107,9 +107,6 @@ function custom_template_include($template) {
     // Define a dynamic template directory path
     $dynamic_template_dir = 'area-zone-templates/';
 
-      // Initialize the variable to avoid "undefined variable" warning
-    $new_template = '';
-
     // Determine the appropriate template based on the query variables
     if ($service && $zone_state && $zone_city && $post_slug) {
         // Full URL: /service/zone_state/zone_city/post_slug
@@ -203,9 +200,10 @@ function Generate_Title_For_Zipcode() {
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
+ 
 
     if($type === "internet"){
-        return "Top $type Providers in $zipcode, $state |  Top Providers";
+        return "Top $type Providers in $zipcode |  Top Providers";
     } elseif ($type === "tv") {
         return "Cable TV Providers in $zipcode, $state |  Top Providers";
     }elseif ($type === "landline") {
@@ -220,6 +218,7 @@ function Generate_Description_For_Zipcode() {
     $city = get_query_var('zone_city', '');
     $zipcode = get_query_var('post_slug', '');
     $type = get_query_var('service', '');
+   
 
     if($type === "internet"){
         return  "Explore all $type service providers in $zipcode, $state. Compare plans, pricing, and the latest promotions to find the perfect provider for your budget and needs.";

@@ -1,4 +1,6 @@
 <?php
+
+
 function get_full_url() {
     $protocol = is_ssl() ? 'https://' : 'http://';
     $host = $_SERVER['HTTP_HOST'];

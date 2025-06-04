@@ -1,10 +1,10 @@
 /*
-Theme Name: Top Providers UK
-Theme URI: https://uk.topproviders.uk
+Theme Name: Top Providers Theme
+Theme URI: https://topproviders.net
 Author: Mufaqar
 Author URI: https://mufaqar.com
-Description: Top Providers UK cusom theme for Top Providers
-Version: 1.0.0
+Description: Top Providers cusom theme for Top Providers
+Version: 2.0.1
 License: GNU General Public License 
 Text Domain: tp_theme
 Tags: custom theme development
@@ -939,10 +939,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1689,6 +1685,11 @@ video {
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -2206,16 +2207,6 @@ video {
 
 .no-underline {
   text-decoration-line: none;
-}
-
-.placeholder-gray-100::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-gray-100::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-placeholder-opacity));
 }
 
 .opacity-40 {
@@ -3008,11 +2999,6 @@ footer {
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
-.focus\:border-indigo-700:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(67 56 202 / var(--tw-border-opacity));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3232,10 +3218,6 @@ footer {
 
   .md\:mr-2 {
     margin-right: 0.5rem;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:mt-20 {

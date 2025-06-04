@@ -1,44 +1,42 @@
+<?php
+/**
+ * The template for displaying the header
+ *
+ * This is the template that displays all of the <head> section, opens the <body> tag and adds the site's header.
+ *
+ * @package HelloElementor
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
+$viewport_content = apply_filters( 'hello_elementor_viewport_content', 'width=device-width, initial-scale=1' );
+$enable_skip_link = apply_filters( 'hello_elementor_enable_skip_link', true );
+$skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="<?php echo esc_attr( $viewport_content ); ?>">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
 
-<button id="changeLocationBtn" class="text-[#96B93A] border hover:bg-[#96B93A] hover:text-white border-[#96B93A] p-3 px-8 rounded-lg">Change Location</button>
+<?php wp_body_open(); ?>
 
+<?php if ( $enable_skip_link ) { ?>
+<a class="skip-link screen-reader-text" href="<?php echo esc_url( $skip_link_url ); ?>"><?php echo esc_html__( 'Skip to content', 'hello-elementor' ); ?></a>
+<?php } ?>
 
-<div id="locationModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span id="closeModal" class="close">&times;</span>
-        <section class="min-h-[55vh] flex items-center">
-            <div class="container mx-auto px-10">
-                <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">Find <span class="text-[#96B93A]">TV, Internet &amp; Home Phone </span> Service Providers</h1>
-                <p class="text-xl text-center font-[Roboto] my-5">Enter your zip code so we can find the best providers in your area:</p>
-                <div class="grid justify-center">
-                    <div class="flex justify-center">
-                        <?php get_template_part('template-parts/search', 'form'); ?>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("locationModal");
-        const btn = document.getElementById("changeLocationBtn");
-        const span = document.getElementById("closeModal");
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    });
-</script>
+<?php
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
+	if ( hello_elementor_display_header_footer() ) {
+		if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
+			get_template_part( 'template-parts/dynamic-header' );
+		} else {
+			get_template_part( 'template-parts/header' );
+		}
+	}
+}

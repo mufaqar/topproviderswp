@@ -34,59 +34,119 @@
 
 $providersData = [
   [
-      'name' => 'BT',
-      'link' => '/providers/bt/',
+      'name' => 'Spectrum',
+      'link' => '/providers/spectrum',
   ],
   [
-      'name' => 'Community Fibre',
-      'link' => '/providers/community-fibre/',
+      'name' => 'Mediacom',
+      'link' => '/providers/mediacom',
   ],
   [
-      'name' => 'Cuckoo',
-      'link' => '/providers/cuckoo/',
+      'name' => 'Xfinity',
+      'link' => '/providers/xfinity',
   ],
   [
-      'name' => 'Direct Save Telecom',
-      'link' => '/providers/direct-save-telecom/',
+      'name' => 'Optimum',
+      'link' => '/providers/optimum',
   ],
   [
-      'name' => 'Gigaclear Ltd',
-      'link' => '/providers/gigaclear-ltd/',
+      'name' => 'Cox',
+      'link' => '/providers/cox',
   ],
   [
-      'name' => 'Hyperoptic',
-      'link' => '/providers/hyperoptic/',
+      'name' => 'Astound Broadband',
+      'link' => '/providers/astound-broadband',
   ],
   [
-      'name' => 'KCOM',
-      'link' => '/providers/kcom/',
+      'name' => 'TDS',
+      'link' => '/providers/tds',
   ],
   [
-      'name' => 'NOW Broadband',
-      'link' => '/providers/now-broadband/',
+      'name' => 'Frontier',
+      'link' => '/providers/frontier',
   ],
   [
-      'name' => 'Onestream',
-      'link' => '/providers/onestream/',
+      'name' => 'Windstream',
+      'link' => '/providers/windstream',
   ],
+  [
+      'name' => 'Verizon',
+      'link' => '/providers/verizon',
+  ],
+  [
+      'name' => 'CenturyLink',
+      'link' => '/providers/centurylink',
+  ],
+  [
+      'name' => 'EarthLink',
+      'link' => '/providers/earthlink',
+  ],
+  [
+      'name' => 'Brightspeed',
+      'link' => '/providers/brightspeed',
+  ],
+  [
+      'name' => 'AT&T',
+      'link' => '/providers/att',
+  ],
+  [
+      'name' => 'HughesNet',
+      'link' => '/providers/hughesnet',
+  ],
+  [
+      'name' => 'Viasat',
+      'link' => '/providers/viasat',
+  ],
+  [
+      'name' => 'DISH',
+      'link' => '/providers/dish',
+  ],
+  [
+      'name' => 'DIRECTV',
+      'link' => '/providers/directv',
+  ],
+  [
+      'name' => 'WOW!',
+      'link' => '/providers/wow',
+  ],
+  [
+      'name' => 'T-Mobile',
+      'link' => '/providers/t-mobile',
+  ],
+  [
+      'name' => 'Rise Broadband',
+      'link' => '/providers/rise-broadband',
+  ]
 ];
 
 $states = [
     [
-        'name' => 'England',
-        'link' => '#',
+        'name' => 'Taxes',
+        'link' => '/internet/tx',
     ],
     [
-        'name' => 'Scotland',
-        'link' => '#',
+        'name' => 'California',
+        'link' => '/internet/ca',
     ],
     [
-        'name' => 'Wales',
-        'link' => '#',
+        'name' => 'Alaska',
+        'link' => '/internet/ak',
     ],
     [
-        'name' => 'Northern Ireland',
-        'link' => '#',
+        'name' => 'Los Angeles',
+        'link' => '/internet/la',
+    ],
+    [
+        'name' => 'New Mexico',
+        'link' => '/internet/nm',
+    ],
+    [
+        'name' => 'Hawaii',
+        'link' => '/internet/hi',
+    ],
+    [
+        'name' => 'Washington',
+        'link' => '/internet/wa',
     ],
 ];
 

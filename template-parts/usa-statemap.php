@@ -1,10 +1,10 @@
 <section class="py-16 bg-[#6746C8]">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-5xl text-center md:leading-tight font-bold text-white mb-10">Find Top Internet Providers by State In UK</h2>
+        <h2 class="text-3xl md:text-5xl text-center md:leading-tight font-bold text-white mb-10">Find Top Internet Providers by State</h2>
         <div class="!max-w-[712px] w-full mx-auto">
             <?php get_template_part('template-parts/search', 'form'); ?>
         </div>
-        <!-- <svg viewBox="0 0 800 600" class="rsm-svg">
+        <svg viewBox="0 0 800 600" class="rsm-svg">
             <g class="rsm-geographies">
                 <path
                     tabindex="0"
@@ -855,6 +855,6 @@
                 </g>
 
             </g>
-        </svg> -->
+        </svg>
     </div>
 </section>
