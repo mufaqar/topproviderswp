@@ -12,7 +12,13 @@ $type = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service
 add_filter('wpseo_title', 'Generate_Title_For_Zipcode');
 add_filter('wpseo_metadesc', 'Generate_Description_For_Zipcode');
 add_filter('wpseo_canonical', 'Generate_Canonical_Tag', 10);
-get_header(); ?>
+get_header();
+
+   $zip_codes_to_search = get_zipcodes_by_city($city);
+    // $city = FormatData($qcity);
+    $provider_ids = create_meta_query_for_zipcodes($zip_codes_to_search, $type);  
+
+?>
 
 <?php
 $args = array(
