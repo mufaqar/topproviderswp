@@ -3,10 +3,10 @@
 
 global $wp_query;
 
-$state = $wp_query->query_vars['zone_state'];
-$city = $wp_query->query_vars['zone_city'];
-$zipcode = $wp_query->query_vars['post_slug'];
-$type =$wp_query->query_vars['service'];
+$state = isset($wp_query->query_vars['zone_state']) ? $wp_query->query_vars['zone_state'] : '';
+$city = isset($wp_query->query_vars['zone_city']) ? $wp_query->query_vars['zone_city'] : '';
+$zipcode = isset($wp_query->query_vars['post_slug']) ? $wp_query->query_vars['post_slug'] : '';
+$type = isset($wp_query->query_vars['service']) ? $wp_query->query_vars['service'] : '';
 
 
 add_filter('wpseo_title', 'Generate_Title_For_Zipcode');
