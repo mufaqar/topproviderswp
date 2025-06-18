@@ -118,7 +118,7 @@ $query_fast = new WP_Query($query_args_fast);
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10"><?php echo $type ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?> </span></h2>
+            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10"><?php echo FormatData($type)  ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?> </span></h2>
         </div>
         <div class="mb-7 flex sm:flex-row gap-4 flex-col justify-between items-center">
             <?php get_template_part( 'template-parts/types', 'routing' ); ?>
