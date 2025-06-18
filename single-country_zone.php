@@ -90,13 +90,8 @@ get_header();
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
                 Internet Providers in  <span class="text-[#96B93A]"><?php the_title()?></span>
-            </h1>
-          
-        </div>
-    </div>
-</section>
-
-<?php if ( have_posts() ) : ?>
+            </h1>  
+            <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-content">
@@ -108,6 +103,11 @@ get_header();
 <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?></p>
 <?php endif; ?>
+        
+        </div>
+    </div>
+</section>
+
 
 
 
