@@ -13,8 +13,6 @@ get_header();
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 1000px;
-            margin: 0 auto;
             padding: 20px;
             color: #333;
         }
