@@ -102,7 +102,7 @@ $query_fast = new WP_Query($query_args_fast);
                 <?php echo FormatData($type) ?> Providers in <br />
                 ZIP Code <span class="text-[#6041BB]"><?php echo $zipcode ?></span>
             </h1>
-            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best 
+            <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best
                 <?php echo FormatData($type) ?> Providers in your area:
             </p>
             <div class="!max-w-[712px] w-full bg-white z-30 rounded-2xl mx-auto">
@@ -110,21 +110,25 @@ $query_fast = new WP_Query($query_args_fast);
             </div>
         </div>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/business.webp" class="absolute right-0 z-10 bottom-0 w-72"/>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png" class="absolute opacity-40 -left-60 -bottom-0 w-[800px]"/>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/business.webp"
+        class="absolute right-0 z-10 bottom-0 w-72" />
+    <img src="<?php echo get_template_directory_uri(); ?>/images/wave1.png"
+        class="absolute opacity-40 -left-60 -bottom-0 w-[800px]" />
 </section>
 
 
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10"><?php echo FormatData($type)  ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?> </span></h2>
+            <h2 class="text-2xl text-center md:text-left font-bold capitalize leading-10">
+                <?php echo FormatData($type)  ?> Providers in <span class="text-[#96B93A]"><?php echo $zipcode ?>
+                </span></h2>
         </div>
         <div class="mb-7 flex sm:flex-row gap-4 flex-col justify-between items-center">
             <?php get_template_part( 'template-parts/types', 'routing' ); ?>
             <div class="flex gap-2 items-center">
                 <p class="font-medium">Sort By:</p>
-                <div  class="bg-[#96B93A] rounded-[6px] pr-2">
+                <div class="bg-[#96B93A] rounded-[6px] pr-2">
                     <select class="p-2 bg-transparent  border-none outline-none focus:border-none">
                         <option value="">Recommended</option>
                         <option value="">Speed</option>
@@ -133,7 +137,7 @@ $query_fast = new WP_Query($query_args_fast);
                 </div>
             </div>
         </div>
-        
+
 
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <?php
@@ -165,27 +169,30 @@ $query_fast = new WP_Query($query_args_fast);
 <section class="my-8">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold capitalize leading-10">What are the Cheap <?php echo str_replace(['-'], ' ', $type); ?> Providers in
+            <h2 class="text-2xl font-bold capitalize leading-10">What are the Cheap
+                <?php echo str_replace(['-'], ' ', $type); ?> Providers in
                 <span class="text-[#96B93A]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
-        <div class="md:w-full min-w-fit grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> bg-[#6041BB]">
+        <div
+            class="md:w-full min-w-fit grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?> bg-[#6041BB]">
             <div class="border-r grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white">Provider</h4>
                 </div>
             </div>
-            
+
             <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
-                <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                    <div>
-                        <h4 class="md:text-base text-xs text-center text-white">
-                            <?php if ($type === 'internet'): ?>Max Download Speed <?php else: ?> # of Channels <?php endif; ?>
-                        </h4>
-                    </div>
+            <div class="grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                <div>
+                    <h4 class="md:text-base text-xs text-center text-white">
+                        <?php if ($type === 'internet'): ?>Max Download Speed <?php else: ?> # of Channels
+                        <?php endif; ?>
+                    </h4>
                 </div>
+            </div>
             <?php endif; ?>
-            
+
             <div class="grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center border-r">
                 <div>
                     <h4 class="md:text-base text-xs text-center text-white">Starting Price</h4>
@@ -218,7 +225,8 @@ $query_fast = new WP_Query($query_args_fast);
                     $contract =  $services['contract'];
             ?>
             <div class="w-full mx-auto h-auto bg-[#fafafa]">
-                <div class="md:w-full w-full grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
+                <div
+                    class="md:w-full w-full grid <?php if ($type !== 'home-security' && $type !== 'landline'): ?>grid-cols-3<?php else: ?> grid-cols-2 <?php endif; ?>">
                     <div
                         class="border-l border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                         <div>
@@ -228,13 +236,13 @@ $query_fast = new WP_Query($query_args_fast);
                     </div>
 
                     <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
-                        <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                            <div>
-                                <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?> 
-                                    <?php if ($type === 'internet'): ?><sup>Mbps</sup><?php endif; ?>
-                                </p>
-                            </div>
+                    <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                        <div>
+                            <p class="text-center md:text-base text-xs"><?php echo $summary_speed ?>
+                                <?php if ($type === 'internet'): ?><sup>Mbps</sup><?php endif; ?>
+                            </p>
                         </div>
+                    </div>
                     <?php endif; ?>
 
                     <div class="border-r border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
@@ -344,8 +352,8 @@ $query_fast = new WP_Query($query_args_fast);
 </section> -->
 
 
- <!-- Fee Sections -->
- <!-- <?php if ($type === 'internet'): ?>
+<!-- Fee Sections -->
+<!-- <?php if ($type === 'internet'): ?>
     <section class="my-16">
         <div class="container mx-auto px-4">
             <div class="mb-10">
@@ -624,7 +632,7 @@ $query_fast = new WP_Query($query_args_fast);
 <section class="my-16">
     <div class="container mx-auto px-4">
         <div class="mb-10">
-            <h2 class="text-2xl font-bold">Summary of <?php echo FormatData($type); ?> Providers in 
+            <h2 class="text-2xl font-bold">Summary of <?php echo FormatData($type); ?> Providers in
                 <span class="text-[#96B93A]"><?php echo $zipcode ?>, <?php echo $state ?> </span>
             </h2>
         </div>
@@ -642,41 +650,43 @@ $query_fast = new WP_Query($query_args_fast);
 
                         <!-- $type !== 'home-security' -->
                         <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
-                            <div class="md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                <div>
-                                    <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
-                                </div>
+                        <div
+                            class="md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <h4 class="md:text-base text-xs text-center text-white">Connection Type</h4>
                             </div>
-                            <div
-                                class="md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                <div>
-                                    <h4 class="md:text-base text-xs text-center text-white">
-                                        <?php if ($type === 'internet'): ?>Max Download Speed<?php endif; ?>
-                                        <?php if ($type === 'tv'): ?>Channels<?php endif; ?>
-                                    </h4>
-                                </div>
+                        </div>
+                        <div
+                            class="md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <h4 class="md:text-base text-xs text-center text-white">
+                                    <?php if ($type === 'internet'): ?>Max Download Speed<?php endif; ?>
+                                    <?php if ($type === 'tv'): ?>Channels<?php endif; ?>
+                                </h4>
                             </div>
+                        </div>
                         <?php endif; ?>
 
                         <!-- $type === 'home-security' -->
                         <?php if ($type === 'home-security' || $type === 'landline'): ?>
-                            <div class="md:border-r border-r-0 md:border-b-0 col-span-2 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                <div>
-                                    <h4 class="md:text-base text-xs text-center text-white">
-                                        <?php if ($type === 'home-security'): ?>Features<?php endif; ?>
-                                        <?php if ($type === 'landline'): ?>Connection<?php endif; ?>
-                                    </h4>
-                                </div>
+                        <div
+                            class="md:border-r border-r-0 md:border-b-0 col-span-2 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                            <div>
+                                <h4 class="md:text-base text-xs text-center text-white">
+                                    <?php if ($type === 'home-security'): ?>Features<?php endif; ?>
+                                    <?php if ($type === 'landline'): ?>Connection<?php endif; ?>
+                                </h4>
                             </div>
+                        </div>
                         <?php endif; ?>
 
-                        
+
                         <div class="grid justify-center border-r md:p-5 p-2 md:h-auto h-[120px] items-center">
                             <div>
                                 <h4 class="md:text-base text-xs text-center text-white">Starting Price</h4>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="flex md:flex-col flex-row w-full md:overflow-hidden overflow-x-scroll">
 
@@ -705,46 +715,49 @@ $query_fast = new WP_Query($query_args_fast);
                             <div
                                 class="w-full md:border-r border-r-0  border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
-                                    <p class="text-center md:text-base text-xs"><a target="_blank" href="/providers/hughesnet"> <?php the_title()?> </a> </p>
+                                    <p class="text-center md:text-base text-xs"><a target="_blank"
+                                            href="/providers/hughesnet"> <?php the_title()?> </a> </p>
                                 </div>
                             </div>
 
                             <?php if ($type !== 'home-security' && $type !== 'landline'): ?>
-                                <div
-                                    class="w-full md:border-r border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs">Satellite</p>
-                                    </div>
+                            <div
+                                class="w-full md:border-r border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                <div>
+                                    <p class="text-center md:text-base text-xs">Satellite</p>
                                 </div>
-                                <div
-                                    class="w-full md:border-r border-r md:border-b border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs"><?php echo $speed ?> 
-                                            <?php if ($type === 'internet'): ?>Mbps<?php endif; ?>
-                                        </p>
-                                    </div>
+                            </div>
+                            <div
+                                class="w-full md:border-r border-r md:border-b border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                <div>
+                                    <p class="text-center md:text-base text-xs"><?php echo $speed ?>
+                                        <?php if ($type === 'internet'): ?>Mbps<?php endif; ?>
+                                    </p>
                                 </div>
+                            </div>
                             <?php endif; ?>
 
                             <?php if ($type === 'home-security' || $type === 'landline'): ?>
-                                <div class="w-full md:border-r col-span-2 border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
-                                    <div>
-                                        <p class="text-center md:text-base text-xs">
-                                            <?php if ($type === 'home-security'): ?><?php echo $feature ?><?php endif; ?>
-                                            <?php if ($type === 'landline'): ?><?php echo $type ?><?php endif; ?>
-                                        </p>
-                                    </div>
+                            <div
+                                class="w-full md:border-r col-span-2 border-r md:border-b-0 border-b grid justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+                                <div>
+                                    <p class="text-center md:text-base text-xs">
+                                        <?php if ($type === 'home-security'): ?><?php echo $feature ?><?php endif; ?>
+                                        <?php if ($type === 'landline'): ?><?php echo $type ?><?php endif; ?>
+                                    </p>
                                 </div>
+                            </div>
                             <?php endif; ?>
-                            
 
-                            <div class="w-full grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
+
+                            <div
+                                class="w-full grid border-r justify-center md:p-5 p-2 md:h-auto h-[120px] items-center">
                                 <div>
                                     <p class="text-center md:text-base text-xs">$<?php echo $price ?>/mo</p>
                                 </div>
                             </div>
 
-                            
+
                         </div>
                         <?php
                                     }
@@ -860,29 +873,23 @@ $query_fast = new WP_Query($query_args_fast);
                     $question = $faq['question'];
                     $answer = $faq['answer'];
             ?>
-                    <div class="faq-item w-full h-fit border border-[#F0F0F0] rounded-[10px] p-[30px] shadow-[0_15px_15px_rgba(0,0,0,0.05)]">
-                        <div class="faq-question flex justify-between cursor-pointer">
-                            <p class="text-lg font-semibold"><?php echo $question; ?></p>
-                            <span class="faq-icon text-lightBlue">
-                                <svg
-                                    stroke="currentColor"
-                                    fill="currentColor"
-                                    stroke-width="0"
-                                    viewBox="0 0 1024 1024"
-                                    class="faq-arrow transform transition duration-200 rotate-0"
-                                    height="24"
-                                    width="24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"></path>
-                                    <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"></path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="faq-answer hidden mt-5">
-                            <p class="text-base font-medium"><?php echo $answer; ?></p>
-                        </div>
-                    </div>
+            <div
+                class="faq-item w-full h-fit border border-[#F0F0F0] rounded-[10px] p-[30px] shadow-[0_15px_15px_rgba(0,0,0,0.05)]">
+                <div class="faq-question flex justify-between cursor-pointer">
+                    <p class="text-lg font-semibold"><?php echo $question; ?></p>
+                    <span class="faq-icon text-lightBlue">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                            class="faq-arrow transform transition duration-200 rotate-0" height="24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z"></path>
+                            <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="faq-answer hidden mt-5">
+                    <p class="text-base font-medium"><?php echo $answer; ?></p>
+                </div>
+            </div>
             <?php
                 }
             ?>
@@ -892,34 +899,31 @@ $query_fast = new WP_Query($query_args_fast);
 
 
 <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
 
-        faqItems.forEach((item) => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-            const arrow = item.querySelector('.faq-arrow');
+    faqItems.forEach((item) => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const arrow = item.querySelector('.faq-arrow');
 
-            question.addEventListener('click', () => {
-                // Close all other open FAQ items
-                faqItems.forEach((otherItem) => {
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    const otherArrow = otherItem.querySelector('.faq-arrow');
-                    if (otherItem !== item) {
-                        otherAnswer.classList.add('hidden');
-                        otherArrow.classList.remove('rotate-45');
-                    }
-                });
-
-                // Toggle the clicked item
-                answer.classList.toggle('hidden');
-                arrow.classList.toggle('rotate-45');
+        question.addEventListener('click', () => {
+            // Close all other open FAQ items
+            faqItems.forEach((otherItem) => {
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherArrow = otherItem.querySelector('.faq-arrow');
+                if (otherItem !== item) {
+                    otherAnswer.classList.add('hidden');
+                    otherArrow.classList.remove('rotate-45');
+                }
             });
+
+            // Toggle the clicked item
+            answer.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-45');
         });
     });
+});
 </script>
 
 <?php get_footer();
-
-

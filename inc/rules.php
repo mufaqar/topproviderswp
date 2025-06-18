@@ -202,16 +202,20 @@ function Generate_Title_For_Zipcode() {
     $city = $wp_query->query_vars['zone_city'];
     $zipcode = $wp_query->query_vars['post_slug'];
     $type =$wp_query->query_vars['service'];
+
+    $f_state = strtoupper($state);
+    $f_type = ucwords($type) ;
+    
+
+    
  
 
     if($type === "internet"){
-        return "Top $type Providers in $zipcode |  Top Providers";
+        return "Fastest $f_type Providers in $zipcode, $f_state |  Top Providers";
     } elseif ($type === "tv") {
-        return "Cable TV Providers in $zipcode, $state |  Top Providers";
-    }elseif ($type === "landline") {
-        return "Landline Home Phone Service Providers in $zipcode, $state |  Top Providers";
-    }elseif ($type === "home-security") {
-        return "Home Security Systems in $zipcode, $state |  Top Providers";
+        return "Fastest $f_type Providers in  $zipcode, $f_state |  Top Providers";
+    }elseif ($type === "internet-tv") {
+        return "Fastest $f_type Providers in  $zipcode, $f_state |  Top Providers";
     }
 }
 
@@ -220,18 +224,17 @@ function Generate_Description_For_Zipcode() {
     $city = get_query_var('zone_city', '');
     $zipcode = get_query_var('post_slug', '');
     $type = get_query_var('service', '');
+
+     $f_state = strtoupper($state);
+    $f_type = ucwords($type) ;
    
 
     if($type === "internet"){
-        return  "Explore all $type service providers in $zipcode, $state. Compare plans, pricing, and the latest promotions to find the perfect provider for your budget and needs.";
+        return  "Explore $f_type providers in $zipcode, $state. Compare exclusive deals to find a plan that fits your budget and streaming needs.";
     } elseif ($type === "tv") {
-        return "Compare Cable TV providers in $zipcode, $state. Explore plans, deals, and pricing to find the best provider that matches your budget and entertainment needs.";
-    }elseif ($type === "landline") {
-        return "Discover the top home phone service providers in $zipcode, $state. Compare plans, pricing, and features to find the perfect landline solution for your needs.";
-    }elseif ($type === "home-security") {
-        return "
-        Find reliable and trustworthy home security systems in $zipcode, $state. Protect your property with affordable solutions tailored to your needs. Explore Top Providers today!
-        ";
+        return "Explore $f_type providers in $zipcode, $state. Compare exclusive deals to find a plan that fits your budget and streaming needs.";
+    }elseif ($type === "internet-tv") {
+        return "Explore $f_type providers in $zipcode, $state. Compare exclusive deals to find a plan that fits your budget and streaming needs.";
     }
 }
 
@@ -243,13 +246,11 @@ function Generate_Title_For_City() {
     $type =$wp_query->query_vars['service'];
 
     if($type === "internet"){
-        return "Top $type Providers in $city, $state |  Trusted and Affordable Solutions from Top Providers";
+        return "Top $type Providers in $city, $state | Trusted and Affordable Solutions from Top Providers";
     } elseif ($type === "tv") {
-        return "Cable TV Providers in $city, $state |  Trusted and Affordable Solutions from Top Providers";
-    }elseif ($type === "landline") {
-        return "Landline Home Phone Service Providers in $city, $state | Trusted and Affordable Solutions from Top Providers";
-    }elseif ($type === "home-security") {
-        return "Home Security Systems in $city, $state | Trusted and Affordable Solutions from Top Providers";
+        return "Top TV Providers in $city, $state | Trusted and Affordable Solutions from Top Providers";
+    }elseif ($type === "internet-tv") {
+        return "Top Internet & TV  Providers in $city, $state | Trusted and Affordable Solutions from Top Providers";
     }
 }
 
@@ -262,7 +263,7 @@ function Generate_Description_For_City() {
     if($type === "internet"){
         return  "View all Internet service providers in $city, $state. Compare Internet plans, prices and new promotions and pick the best provider that fits within your budget.";
     } elseif ($type === "tv") {
-        return "Compare Cable TV providers in $city, $state. View Cable TV plans and deals and choose the best provider that fits within your budget";
+        return "Compare TV providers in $city, $state. View TV plans and deals and choose the best provider that fits within your budget";
     }elseif ($type === "landline") {
         return "Find the best home phone service providers in $city, $state. Compare providers, plans, prices and amenities to set your landline up.";
     }elseif ($type === "home-security") {
@@ -281,7 +282,7 @@ function Generate_Title_For_State() {
     if($type === "internet"){
         return "Top $type Providers in $state |  Top Providers";
     } elseif ($type === "tv") {
-        return "Cable TV Providers in $state |  Top Providers";
+        return "TV Providers in $state |  Top Providers";
     }elseif ($type === "landline") {
         return "Landline Home Phone Service Providers in $state |  Top Providers";
     }elseif ($type === "home-security") {
@@ -298,7 +299,7 @@ function Generate_Description_For_State() {
     if($type === "internet"){
         return  "View all Internet service providers in $state. Compare Internet plans, prices and new promotions and pick the best provider that fits within your budget.";
     } elseif ($type === "tv") {
-        return "Compare Cable TV providers in $state. View Cable TV plans and deals and choose the best provider that fits within your budget";
+        return "Compare TV providers in $state. View TV plans and deals and choose the best provider that fits within your budget";
     }elseif ($type === "landline") {
         return "Find the best home phone service providers in $state. Compare providers, plans, prices and amenities to set your landline up.";
     }elseif ($type === "home-security") {
