@@ -99,11 +99,11 @@ $query_fast = new WP_Query($query_args_fast);
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
-                <?php echo $type ?> Providers in <br />
+                <?php echo FormatData($type) ?> Providers in <br />
                 ZIP Code <span class="text-[#6041BB]"><?php echo $zipcode ?></span>
             </h1>
             <p class="text-xl text-center font-[Roboto] my-5">Enter your zip so we can find the best 
-                <?php echo $type ?> Providers in your area:
+                <?php echo FormatData($type) ?> Providers in your area:
             </p>
             <div class="!max-w-[712px] w-full bg-white z-30 rounded-2xl mx-auto">
                 <?php get_template_part('template-parts/search', 'form'); ?>
