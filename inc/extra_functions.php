@@ -542,15 +542,18 @@ function Cheap_provider_details($provider_ids) {
     return $provider_details; // Return the array of provider details
 }
 
-
-function FormatData($string) {
+function FormatData($string) {   
+    $string = trim($string); 
     if (strtolower($string) === 'tv') {
         return 'TV';
     }
+    if (strtolower($string) === 'internet-tv') {
+        return 'Internet TV';
+    }
     $string = str_replace('-', ' ', $string);
-    $formatted_string = ucwords($string);
-    return $formatted_string;
+    return ucwords($string);
 }
+
 
 
 function render_provider_buttons($phone, $permalink) {
