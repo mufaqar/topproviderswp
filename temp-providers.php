@@ -1,63 +1,100 @@
 <?php
-/**
- * Copyright (C) 2014-2023 ServMask Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
- * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
- * ███████╗█████╗  ██████╔╝██║   ██║██╔████╔██║███████║███████╗█████╔╝
- * ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██║╚██╔╝██║██╔══██║╚════██║██╔═██╗
- * ███████║███████╗██║  ██║ ╚████╔╝ ██║ ╚═╝ ██║██║  ██║███████║██║  ██╗
- * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
- */
 
-if ( ! function_exists( 'ai1wmve_clear_scheduled_events' ) ) {
-	/**
-	 * Clears all scheduled events for selected storage type
-	 * If $extension is null then it clears ALL the events
-	 *
-	 * @param $extension
-	 */
-	function ai1wmve_clear_scheduled_events( $extension = null ) {
-		$events = new Ai1wmve_Schedule_Events();
-		$events->clear( $extension );
-	}
-}
+/** Template Name: Providers */
 
-if ( ! function_exists( 'ai1wmve_is_running' ) ) {
-	/**
-	 * Check whether export/import is running
-	 *
-	 * @return boolean
-	 */
-	function ai1wmve_is_running() {
-		if ( isset( $_GET['file'] ) || isset( $_POST['file'] ) ) {
-			return true;
-		}
+get_header();
+?>
 
-		return false;
-	}
-}
 
-if ( ! function_exists( 'ai1wmve_reset_db_backup_path' ) ) {
-	/**
-	 * Get db-options-backup.json absolute path
-	 *
-	 * @return string
-	 */
-	function ai1wmve_reset_db_backup_path() {
-		return AI1WM_STORAGE_PATH . DIRECTORY_SEPARATOR . AI1WMVE_RESET_DB_BACKUP;
-	}
-}
+<section class="min-h-[40vh] flex items-center bg-[#6041BB]">
+    <div class="container mx-auto px-4" style="padding-top: 16px;">
+        <div class="flex justify-center flex-col items-center">
+            <h1 class="sm:text-5xl text-2xl text-white font-bold text-center max-w-[850px] mx-auto capitalize md:leading-10">
+                Internet Providers in <br />
+                ZIP Code <span class="text-[#96B93A]">your area.</span>
+            </h1>
+            <p class="text-xl text-center text-white font-[Roboto] my-5">Enter your zip so we can find the best Internet Providers in your area:</p>
+            <?php get_template_part('template-parts/search', 'form'); ?>
+        </div>
+    </div>
+</section>
+
+<!-- TV Providers / Internet Providers -->
+<section class="py-16">
+    <div class="max-w-[1110px] w-full mx-auto px-4">
+        <div>
+            <h3 class="text-3xl font-semibold mb-10">Featured Providers</h3>
+            <div class="mt-8 grid grid-cols-1 sm:!grid-cols-2 gap-8 md:!grid-cols-4 text-center">
+                <?php
+                // Arguments for the WP Query
+                $args = array(
+                    'post_type'      => 'providers', // Custom post type name
+                    'posts_per_page' => 4, // Number of posts to display
+                    'order'          => 'DESC', // Order of the posts
+                    'orderby'        => 'date' // Order by date
+                );
+
+                // Custom query to fetch posts
+                $providers_query = new WP_Query($args);
+
+                // The Loop
+                if ($providers_query->have_posts()) :
+                    while ($providers_query->have_posts()) : $providers_query->the_post();
+                        get_template_part('template-parts/box', 'provider');
+                    endwhile;
+                else :
+                    echo '<p>No providers found.</p>';
+                endif;
+
+                // Reset post data to avoid conflicts
+                wp_reset_postdata();
+                ?>
+
+            </div>
+        </div>
+
+        <div class="max-w-[1110px] w-full mx-auto h-[1px] bg-black/20 my-16"></div>
+
+        <div>
+            <h3 class="text-3xl font-semibold mb-10">Top TV and Internet Service Providers</h3>
+            <div class="grid sm:!grid-cols-2 md:!grid-cols-4 grid-cols-1 gap-7">
+            <?php
+                // Arguments for the WP Query
+                $args = array(
+                    'post_type'      => 'providers', // Custom post type name
+                    'posts_per_page' => -1, // Number of posts to display
+                    'order'          => 'DESC', // Order of the posts
+                    'orderby'        => 'date' // Order by date
+                );
+
+                // Custom query to fetch posts
+                $providers_query = new WP_Query($args);
+
+                // The Loop
+                if ($providers_query->have_posts()) :
+                    while ($providers_query->have_posts()) : $providers_query->the_post();
+                        get_template_part('template-parts/box', 'provider');
+                    endwhile;
+                else :
+                    echo '<p>No providers found.</p>';
+                endif;
+
+                // Reset post data to avoid conflicts
+                wp_reset_postdata();
+                ?>
+
+            </div>
+        </div>
+
+        <div class="max-w-[1110px] w-full mx-auto h-[1px] bg-black/20 my-16"></div>
+
+        
+    </div>
+</section>
+
+
+
+
+
+<?php
+get_footer();  ?>
