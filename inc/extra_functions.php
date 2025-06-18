@@ -548,7 +548,7 @@ function FormatData($string) {
         return 'TV';
     }
     if (strtolower($string) === 'internet-tv') {
-        return 'Internet TV';
+        return 'Internet & TV';
     }
     $string = str_replace('-', ' ', $string);
     return ucwords($string);
