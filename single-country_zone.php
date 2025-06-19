@@ -1,12 +1,23 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package tp_theme
- */
+// In your single template (e.g., single-yourposttype.php)
+global $post;
 
+// 1. Set custom title & description
+$custom_title = "Internet Providers in  " .get_the_title(); 
+$custom_description = "Find the Best TV, Internet Providers in " .get_the_title(); 
+
+// 2. Modify the <title> tag via WordPress filters
+add_filter('document_title_parts', function($title_parts) use ($custom_title) {
+    $title_parts['title'] = $custom_title; // Override the title part
+    return $title_parts;
+});
+
+// 3. Add meta description to <head> via wp_head
+add_action('wp_head', function() use ($custom_description) {
+    echo '<meta name="description" content="' . esc_attr($custom_description) . '">';
+}, 1); // Priority 1 ensures it appears early in <head>
+
+// 4. Now load the header
 get_header();
 ?>
 <style>
