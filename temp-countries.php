@@ -16,7 +16,7 @@
         
 
         <div>
-            <h3 class="text-3xl font-semibold mb-10">Top Internet By Countries </h3>
+            <h3 class="text-3xl font-semibold mb-10">Top Internet Providers By Countries </h3>
             <div class="grid sm:!grid-cols-2 md:!grid-cols-3 grid-cols-1 gap-7">
             <?php
                 // Arguments for the WP Query
