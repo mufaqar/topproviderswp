@@ -130,7 +130,7 @@ th {
     <div class="container mx-auto px-4">
         <div class="flex justify-center flex-col items-center">
             <h1 class="sm:text-5xl text-2xl font-bold text-center max-w-[850px] mx-auto capitalize leading-10">
-                Internet Providers in <span class="text-[#96B93A]"><?php the_title()?></span>
+               Top Internet Providers in <span class="text-[#96B93A]"><?php the_title()?></span>
             </h1>
 
         </div>
