@@ -8,6 +8,8 @@ Change zip code pages content, internet, tv, landline AND CHANGE SLUG TO: /inter
 /tv/ca/glendale/91207
 /landline/ca/glendale/91207
 
+#zip code and  state and city
+
 
 
 
