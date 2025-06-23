@@ -10,6 +10,8 @@ Change zip code pages content, internet, tv, landline AND CHANGE SLUG TO: /inter
 
 #zip code and  state and city
 
+#updated sitemap
+
 
 
 
