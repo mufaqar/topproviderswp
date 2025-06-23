@@ -1,5 +1,4 @@
 <?php
-
 function handle_contact_form_submission() {
     // Check nonce for security (if added in the form)
     if (!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'ajax_form_nonce')) {
